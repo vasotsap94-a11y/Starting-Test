@@ -1,0 +1,229 @@
+/* Basic Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    background: #004d40; /* Dark Teal */
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffb300; /* Amber/Gold */
+}
+
+.book-btn {
+    background: #ffb300;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: #004d40 !important;
+    font-weight: bold !important;
+}
+
+/* Utility Class for Buttons */
+.btn {
+    display: inline-block;
+    background: #ffb300;
+    color: #004d40;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #ffa000;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-placeholder.jpg') no-repeat center center/cover; /* Replace with your image */
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+/* Dark overlay for better text readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5em;
+    color: #004d40;
+    margin-bottom: 40px;
+}
+
+/* Rooms Grid */
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.room-card {
+    background: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.room-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.room-card h3 {
+    color: #004d40;
+    margin: 15px 15px 5px;
+}
+
+.room-card p {
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.room-card a {
+    display: inline-block;
+    margin: 0 15px 15px;
+    color: #ffb300;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Amenities Section */
+.amenities {
+    background: #e0f2f1; /* Light Teal background */
+}
+
+.amenities-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.amenity-item {
+    flex: 1;
+    max-width: 350px;
+}
+
+.amenity-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.amenity-item h4 {
+    color: #004d40;
+    font-size: 1.2em;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+.footer-links a {
+    color: #ffb300;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide standard nav on small screens */
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .amenities-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
